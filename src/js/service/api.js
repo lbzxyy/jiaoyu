@@ -5,7 +5,7 @@ angular.module('api',[])
         var api={};
         angular.forEach(WEB_API,function(config,key){
             api[key]=function(fn,data){
-                http[config.method](config.url,fn,data)
+                http[config.method](config.url, fn, data);
             }
 
         })

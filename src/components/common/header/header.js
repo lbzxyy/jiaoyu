@@ -8,8 +8,16 @@ angular.module('header',[])
             restrict:'E',
             templateUrl:'/src/components/common/header/header.html',
             replace:true,
-            controller:['$scope',function($scope){
-                console.log('头部');
-            }]
+            controller:'nglHeaderCtrl'
         }
+    }])
+    .controller('nglHeaderCtrl',['$scope','$location','api',function($scope,$location,api){
+        $scope.logout=function(){
+            api.logout(function(){
+                $location.path('/login')
+            })
+        }
+        $scope.$on('logout',[function(){
+            $scope.logout()
+        }])
     }])

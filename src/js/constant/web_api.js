@@ -12,5 +12,10 @@ angular.module('web_api',[])
         logout:{
             url:'/api/logout',
             method:'post'
+        },
+        //修改密码
+        repass:{
+            url:'/api/teacher/repass',
+            mehtod:'post'
         }
     })

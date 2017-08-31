@@ -8,8 +8,34 @@ angular.module('login',[])
             restrict:'E',
             templateUrl:'/src/components/common/login/login.html',
             replace:true,
-            controller:['$scope',function($scope){
-                console.log('登录');
-            }]
+            controller:'nglLoginCtrl'
         }
+    }])
+    .controller('nglLoginCtrl',['$scope','$location','$http',function($scope,$location,$http){
+            $scope.user={
+                tc_name:'',
+                tc_pass:''
+            }
+        $scope.login=function(){
+            $http({
+                url:'/api/login',
+                method:'post',
+                data:'tc_name='+$scope.user.tc_name+'&'+'tc_pass='+$scope.user.tc_pass,
+                headers:{
+                    'Content-Type':'application/x-www-form-urlencoded'
+                }
+            })
+                .then(function(resp){
+                    console.log(resp);
+                    var data=resp.data;
+                    if(data.code==200){
+                        localStorage.setItem('userInfo',JSON.stringify(data.result));
+                        $location.path('/');
+                    }
+                    else{
+                        alert('服务器响应错误')
+                    }
+                })
+        }
+
     }])

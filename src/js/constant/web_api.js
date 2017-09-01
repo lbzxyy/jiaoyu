@@ -16,6 +16,6 @@ angular.module('web_api',[])
         //修改密码
         repass:{
             url:'/api/teacher/repass',
-            mehtod:'post'
+            method:'post'
         }
     })

@@ -16,8 +16,8 @@ angular.module('header',[])
             api.logout(function(){
                 $location.path('/login')
             })
-        }
-        $scope.$on('logout',[function(){
+        };
+        $scope.$on('logout',function(){
             $scope.logout()
-        }])
+        });
     }])

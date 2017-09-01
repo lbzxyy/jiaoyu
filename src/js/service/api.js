@@ -7,7 +7,9 @@ angular.module('api',[])
             api[key]=function(fn,data){
                 http[config.method](config.url, fn, data);
             }
+            console.log(config.url);
 
-        })
+        });
+
         return api;
     }])

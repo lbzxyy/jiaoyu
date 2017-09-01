@@ -1,3 +1,42 @@
+<!--<div class="main">-->
+    <!--<div class="container-fluid">-->
+        <!--&lt;!&ndash; 头部 &ndash;&gt;-->
+        <!--<ngl-header></ngl-header>-->
+        <!--&lt;!&ndash; 修改密码 &ndash;&gt;-->
+        <!--<div class="body">-->
+            <!--<div class="repass">-->
+                <!--<form ng-submit="repass()" class="form-horizontal col-xs-offset-2">-->
+                    <!--<div class="form-group">-->
+                        <!--<label for=""  class="col-xs-3 control-label">原密码</label>-->
+                        <!--<div class="col-xs-4">-->
+                            <!--<input name="" ng-model="user.tc_pass" type="text" class="form-control input-sm">-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--<div class="form-group">-->
+                        <!--<label for="" class="col-xs-3 control-label">新密码</label>-->
+                        <!--<div class="col-xs-4">-->
+                            <!--<input name="" ng-model="user.tc_new_pass" type="password" class="form-control input-sm">-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--<div class="form-group">-->
+                        <!--<label for="" class="col-xs-3 control-label">确认密码</label>-->
+                        <!--<div class="col-xs-4">-->
+                            <!--<input name="" ng-model="user.tc_new_pass_repeat" type="text" class="form-control input-sm">-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--<div class="form-group">-->
+                        <!--<div class="col-xs-7">-->
+                            <!--<button type="submit"  class="btn btn-success btn-sm pull-right">修 改</button>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</form>-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</div>-->
+<!--</div>-->
+
+
+<!-- 主体 -->
 <div class="main">
     <div class="container-fluid">
         <!-- 头部 -->
@@ -9,24 +48,24 @@
                     <div class="form-group">
                         <label for="" class="col-xs-3 control-label">原密码</label>
                         <div class="col-xs-4">
-                            <input name="" type="text" class="form-control input-sm">
+                            <input ng-model="user.tc_pass" type="text" class="form-control input-sm">
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="" class="col-xs-3 control-label">新密码</label>
                         <div class="col-xs-4">
-                            <input name="" type="password" class="form-control input-sm">
+                            <input ng-model="user.tc_new_pass" type="password" class="form-control input-sm">
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="" class="col-xs-3 control-label">确认密码</label>
                         <div class="col-xs-4">
-                            <input name="" type="text" class="form-control input-sm">
+                            <input ng-model="user.tc_new_pass_repeat" type="text" class="form-control input-sm">
                         </div>
                     </div>
                     <div class="form-group">
                         <div class="col-xs-7">
-                            <button type="submit"  class="btn btn-success btn-sm pull-right">修 改</button>
+                            <button type="submit" class="btn btn-success btn-sm pull-right">修 改</button>
                         </div>
                     </div>
                 </form>

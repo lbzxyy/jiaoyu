@@ -22,9 +22,10 @@ angular.module('repass', [])
                 alert('两次密码不一样');
                 return;
             }
+            //console.log( $scope.user);
             api.repass(function(){
-            $rootScope.$broadcast('logout')
-            },$scope.user)
+                $rootScope.$broadcast('logout');
+            },$scope.user);
         }
 
     }])

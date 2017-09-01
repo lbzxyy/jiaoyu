@@ -44,6 +44,7 @@ angular.module('http',[])
                 }
 
             }).then(function(resp){
+                console.log(resp);
                 var data=resp.data;
                 if(data.code==200){
                     fn(data);
